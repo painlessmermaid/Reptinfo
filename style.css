@@ -1,0 +1,185 @@
+body{
+  background-image: url('./fotos/fondo.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+  margin: 0;
+  
+}
+/* --- ESTILOS DEL HEADER --- */
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  background-color: #1b4332; /* Verde oscuro elegante */
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye espacio entre logo, buscador y menú */
+  flex-wrap: wrap; /* Permite adaptarse a celulares */
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Estilo del Título / Logo */
+.header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Estilo de la Barra de Búsqueda (Input) */
+.header-busqueda {
+  flex: 1 1 250px; /* Crece si hay espacio, pero no se encoge demasiado */
+  max-width: 400px;
+}
+
+.header input[type="search"] {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 25px; /* Bordes redondeados modernos */
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Efecto al hacer clic en el buscador */
+.header input[type="search"]:focus {
+  background-color: #ffffff;
+  border-color: #52b788;
+  box-shadow: 0 0 8px rgba(82, 183, 136, 0.5);
+}
+
+/* Estilo de los Enlaces de Navegación */
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: #d8f3dc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #52b788; /* Cambia a verde claro al pasar el mouse */
+}
+
+/* --- ADAPTACIÓN A CELULARES --- */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Alinea todo en columna en celulares */
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .header-busqueda {
+    max-width: 100%;
+    order: 3; /* Pon el buscador abajo del menú en móvil */
+  }
+
+  .header-nav {
+    justify-content: center;
+  }
+}
+.cuerpo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que pasen a la siguiente fila */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    /* flex: crecer encoger tamaño-base */
+    flex: 1 1 calc(33.333% - 20px); /* 3 en PC */
+    max-width: 350px;
+    background-color: #4caabf;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Media queries para Flexbox */
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 en Tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%; /* 1 en Celular */
+    }
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+@media(min-width:768px) {
+  body{
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+
+.card {
+    width: 300px;
+    background-color:#4caabf ;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h2 {
+    margin: 0;
+    color: white;
+}
+
+.card-content p {
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+}
+
+.card button {
+    background-color: #40916c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #1b4332;
+}

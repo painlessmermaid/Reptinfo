@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Animal - Reptinfo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+       <div class="header">
+        <div class="header-logo">
+            <h1>Reptinfo</h1>
+        </div>
+        
+        <div class="header-busqueda">
+            <input type="search" placeholder="Buscar animales...">
+        </div>
+
+        <nav class="header-nav">
+            <a href="index.html">Home</a>
+            <a href="terrarios.html">Terrarios</a>
+        </nav>
+    </div>
+    <!-- Contenedor donde JS inyectará los datos -->
+    <main class="detalle-container">
+        <h1 id="animal-nombre">Cargando...</h1>
+        <p><em id="animal-cientifico"></em></p>
+        
+        <img id="animal-imagen" src="" alt="">
+
+        <div class="ficha-tecnica">
+            <p><strong>Dieta:</strong> <span id="animal-dieta"></span></p>
+            <p><strong>Origen:</strong> <span id="animal-origen"></span></p>
+            <p><strong>Temperatura ideal:</strong> <span id="animal-temp"></span></p>
+            <p><strong>Humedad ideal:</strong> <span id="animal-humedad"></span></p>
+        </div>
+
+        <p id="animal-descripcion"></p>
+    </main>
+
+    <!-- Cargas primero los datos y luego la lógica -->
+    <script src="js/datos.js"></script>
+    <script src="js/detalle.js"></script>
+</body>
+</html>
